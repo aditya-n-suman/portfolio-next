@@ -3,21 +3,22 @@ import "../globals.css";
 import Header from "@/components/header";
 
 export const metadata: Metadata = {
-	title: "Adity Nath Suman",
-	description: "one of the best frontend developers",
+  title: "Adity Nath Suman",
+  description: "one of the best frontend developers",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={``}>
-				<Header />
-				{children}
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className="">
+        <Header />
+
+        <div className="px-36">{children}</div>
+      </body>
+    </html>
+  );
 }
