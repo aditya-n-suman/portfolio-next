@@ -1,4 +1,6 @@
-const IconGitHub = () => (
+import { IconProps } from "@/types/common";
+
+const IconGitHub = ({ height, width }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     role="img"
@@ -8,6 +10,8 @@ const IconGitHub = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    height={height}
+    width={width}
     className="feather feather-github"
   >
     <title>GitHub</title>

@@ -61,10 +61,12 @@ const config: Config = {
       height: {
         tab: "var(--tab-height)",
         nav: "var(--nav-height)",
+        '90px': "var(--fz-90px)"
       },
       width: {
         tab: "var(--tab-width)",
         "30px": "var(--hamburger-width)",
+        "1px": "var(--fz-1px)"
       },
       translate: {
         "2px": "2px",
@@ -75,6 +77,9 @@ const config: Config = {
         sans: "var(--font-sans)",
         mono: "var(--font-mono)",
       },
+      lineHeight: {
+        4.5: "18px"
+      }
     },
   },
   plugins: [],

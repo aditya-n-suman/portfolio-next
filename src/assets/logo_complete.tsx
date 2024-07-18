@@ -6,7 +6,7 @@ const Logo = () => (
     viewBox="0 0 84 96"
     width="100%"
   >
-    <title>Logo no</title>
+    <title>Logo</title>
     <g transform="translate(3,3)">
       <polygon
         id="Shape"

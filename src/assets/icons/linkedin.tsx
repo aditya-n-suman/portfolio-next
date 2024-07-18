@@ -1,4 +1,6 @@
-const IconLinkedin = () => (
+import { IconProps } from "@/types/common";
+
+const IconLinkedin = ({ height, width }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     role="img"
@@ -8,6 +10,8 @@ const IconLinkedin = () => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    height={height}
+    width={width}
     className="feather feather-linkedin"
   >
     <title>LinkedIn</title>

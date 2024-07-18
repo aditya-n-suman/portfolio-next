@@ -29,6 +29,8 @@
   --fz-xxl: 22px;
   --fz-heading: 32px;
   --border-radius: 4px;
+  --fz-1px: 1px;
+  --fz-90px: 90px;
   --nav-height: 100px;
   --nav-scroll-height: 70px;
   --tab-height: 42px;
@@ -48,12 +50,13 @@ body {
   color: var(--lightest-slate);
   min-height: 100vh;
   background: var(--navy);
+  --webkit-font-smootinh: antialiased;
 }
 
 @layer base {
   @font-face {
     font-family: "SF Mono";
-    src: url(./assets/fonts/SFMonoRegular.woff) format("woff");
+    src: url(./assets/fonts/SFMono-Regular.woff2) format("woff2");
   }
 }
 
@@ -72,5 +75,13 @@ body {
 
   .fz-translate {
     @apply -translate-x-2.5 -translate-y-2.5;
+  }
+
+  .fz-sidebar-line {
+    @apply h-90px w-1px bg-slate-light mx-auto
+  }
+
+  .fz-vertical-rl {
+    writing-mode: vertical-rl;
   }
 }

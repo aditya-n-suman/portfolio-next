@@ -23,7 +23,7 @@ const Header = () => {
           <ol className="flex list-zero list-outside gap-14 ">
             {NAV_ITEMS.map((item) => (
               <li className="marker:text-green hover:text-green" key={item}>
-                {item}
+                <a href={`#${item.toLowerCase()}`} className="">{item}</a>
               </li>
             ))}
           </ol>
