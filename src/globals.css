@@ -58,6 +58,21 @@ body {
     font-family: "SF Mono";
     src: url(./assets/fonts/SFMono-Regular.woff2) format("woff2");
   }
+  @font-face {
+    font-family: "Calibre";
+    src: url(./assets/fonts/Calibre-Regular.woff2) format("woff2");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Calibre";
+    src: url(./assets/fonts/Calibre-Medium.woff2) format("woff2");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Calibre";
+    src: url(./assets/fonts/Calibre-Semibold.woff2) format("woff2");
+    font-weight: 900;
+  }
 }
 
 @layer utilities {
@@ -74,14 +89,20 @@ body {
   }
 
   .fz-translate {
-    @apply -translate-x-2.5 -translate-y-2.5;
+    @apply -translate-x-3px -translate-y-3px;
   }
 
   .fz-sidebar-line {
-    @apply h-90px w-1px bg-slate-light mx-auto
+    @apply h-90px w-1px bg-slate-light mx-auto;
   }
 
   .fz-vertical-rl {
     writing-mode: vertical-rl;
+  }
+
+  .big-heading {
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: 0.9;
+    /* @apply leading-none; */
   }
 }

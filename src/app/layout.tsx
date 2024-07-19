@@ -5,7 +5,7 @@ import LeftSidebar from "@/components/leftSidebar";
 import RightSidebar from "@/components/rightSidebar";
 
 export const metadata: Metadata = {
-  title: "Adity Nath Suman",
+  title: "Aditya Nath Suman",
   description: "one of the best frontend developers",
 };
 
