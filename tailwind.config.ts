@@ -15,27 +15,27 @@ const config: Config = {
       blue: "var(--blue)",
       navy: {
         DEFAULT: "var(--navy)",
-        "dark": "var(--dark-navy)",
-        "light": "var(--light-navy)",
-        "lightest": "var(--lightest-navy)",
-        "shadow": "var(--navy-shadow)"
+        dark: "var(--dark-navy)",
+        light: "var(--light-navy)",
+        lightest: "var(--lightest-navy)",
+        shadow: "var(--navy-shadow)",
       },
       slate: {
         DEFAULT: "var(--slate)",
-        "dark": "var(--dark-slate)",
-        "light": "var(--light-slate)",
-        "lightest": "var(--lightest-slate)"
-      }
+        dark: "var(--dark-slate)",
+        light: "var(--light-slate)",
+        lightest: "var(--lightest-slate)",
+      },
     },
     listStyleType: {
-      "zero": "decimal-leading-zero"
+      zero: "decimal-leading-zero",
     },
     zIndex: {
       0: "0",
       1: "1",
       2: "2",
       10: "10",
-      11: "11"
+      11: "11",
     },
     fontSize: {
       xxs: "var(--fz-xxs)",
@@ -55,23 +55,31 @@ const config: Config = {
       borderWidth: {
         "1px": "1px",
       },
+      borderRadius: {
+        1.5: "4px",
+      },
       height: {
         tab: "var(--tab-height)",
-        nav: "var(--nav-height)"
+        nav: "var(--nav-height)",
+        '90px': "var(--fz-90px)"
       },
       width: {
         tab: "var(--tab-width)",
-        "30px": "var(--hamburger-width)"
+        "30px": "var(--hamburger-width)",
+        "1px": "var(--fz-1px)"
       },
       translate: {
-        '2px': "2px",
+        "2px": "2px",
         2.5: "2.5px",
-        '3px': "3px"
+        "3px": "3px",
       },
       fontFamily: {
         sans: "var(--font-sans)",
-        mono: "var(--font-mono)"
+        mono: "var(--font-mono)",
       },
+      lineHeight: {
+        4.5: "18px"
+      }
     },
   },
   plugins: [],

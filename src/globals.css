@@ -17,8 +17,9 @@
   --green-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
-  --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --fz-xxs: 12px;
   --fz-xs: 13px;
   --fz-sm: 14px;
@@ -28,6 +29,8 @@
   --fz-xxl: 22px;
   --fz-heading: 32px;
   --border-radius: 4px;
+  --fz-1px: 1px;
+  --fz-90px: 90px;
   --nav-height: 100px;
   --nav-scroll-height: 70px;
   --tab-height: 42px;
@@ -37,20 +40,23 @@
   --hamburger-width: 30px;
   --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
   --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
-  --ham-after: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  --ham-after-active: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  --ham-after: bottom 0.1s ease-in 0.25s,
+    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ham-after-active: bottom 0.1s ease-out,
+    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--lightest-slate);
   min-height: 100vh;
-  background: var(--navy)
+  background: var(--navy);
+  --webkit-font-smootinh: antialiased;
 }
 
 @layer base {
   @font-face {
     font-family: "SF Mono";
-    src: url(./assets/fonts/SFMonoRegular.woff) format("woff");
+    src: url(./assets/fonts/SFMono-Regular.woff2) format("woff2");
   }
 }
 
@@ -61,5 +67,21 @@ body {
 
   .fz-transition {
     transition: var(--transition);
+  }
+
+  .fz-shadow {
+    box-shadow: 3px 3px 0 0 var(--green);
+  }
+
+  .fz-translate {
+    @apply -translate-x-2.5 -translate-y-2.5;
+  }
+
+  .fz-sidebar-line {
+    @apply h-90px w-1px bg-slate-light mx-auto
+  }
+
+  .fz-vertical-rl {
+    writing-mode: vertical-rl;
   }
 }
