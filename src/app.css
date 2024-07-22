@@ -17,3 +17,11 @@
 .profile-pic-container:hover img {
   filter: none;
 }
+
+.with-dot {
+  @apply relative pl-8;
+}
+.with-dot::before {
+  @apply absolute left-px p-px text-green;
+  content: "▹";
+}
