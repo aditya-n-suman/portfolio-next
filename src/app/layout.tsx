@@ -20,7 +20,7 @@ export default function RootLayout({
         <Header />
         <LeftSidebar />
         <RightSidebar />
-        <div className="px-36">{children}</div>
+        <div className="px-36 w-full">{children}</div>
       </body>
     </html>
   );
