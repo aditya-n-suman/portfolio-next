@@ -55,7 +55,7 @@ body {
   color: var(--lightest-slate);
   min-height: 100vh;
   background: var(--navy);
-  --webkit-font-smootinh: antialiased;
+  --webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -99,36 +99,34 @@ p {
   }
 }
 
-@layer utilities {
-  .fz-translate {
-    @apply -translate-x-3px -translate-y-3px;
-  }
+.fz-translate {
+  @apply -translate-x-3px -translate-y-3px;
+}
 
-  .-fz-translate {
-    @apply translate-x-3px translate-y-3px;
-  }
+.-fz-translate {
+  @apply translate-x-3px translate-y-3px;
+}
 
-  .fz-sidebar-line {
-    @apply h-90px w-1px bg-slate-light mx-auto;
-  }
+.fz-sidebar-line {
+  @apply h-90px w-1px bg-slate-light mx-auto;
+}
 
-  .fz-vertical-rl {
-    writing-mode: vertical-rl;
-  }
+.fz-vertical-rl {
+  writing-mode: vertical-rl;
+}
 
-  .big-heading {
-    font-size: clamp(40px, 8vw, 80px);
-    line-height: 0.9;
-  }
-  .numbered-heading {
-    font-size: clamp(26px, 5vw, var(--fz-heading));
-    @apply text-slate-lightest;
-    line-height: 1.1;
-  }
-  .numbered-heading::before {
-    @apply font-mono font-thin text-green text-lg mr-3;
-    counter-increment: section;
-    content: counter(section, decimal-leading-zero) ".";
-    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
-  }
+.big-heading {
+  font-size: clamp(40px, 8vw, 80px);
+  line-height: 0.9;
+}
+.numbered-heading {
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  @apply text-slate-lightest;
+  line-height: 1.1;
+}
+.numbered-heading::before {
+  @apply font-mono font-thin text-green text-lg mr-3;
+  counter-increment: section;
+  content: counter(section, decimal-leading-zero) ".";
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
 }

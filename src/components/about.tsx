@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="px-12 w-full flex flex-col gap-10 min-h-screen items-center lg:flex-row"
+      className="px-12 py-25 w-full flex flex-col gap-10 min-h-screen items-center lg:flex-row"
     >
       <div className="w-3/5 text-xl ">
         <NumberedHeading title="About Me" width="w-full" />
@@ -32,8 +32,10 @@ const About = () => {
           Here are a few technologies I’ve been working with recently:
         </p>
         <ul className="grid lg:grid-cols-3 font-mono text-xs">
-          {MY_TECHS.map(tech => (
-            <li key={tech} className="with-dot text-nowrap">{tech}</li>
+          {MY_TECHS.map((tech) => (
+            <li key={tech} className="with-dot text-nowrap my-1">
+              {tech}
+            </li>
           ))}
         </ul>
       </div>

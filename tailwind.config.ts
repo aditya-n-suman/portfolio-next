@@ -82,6 +82,9 @@ const config: Config = {
       lineHeight: {
         4.5: "18px",
       },
+      padding: {
+        25: "100px",
+      },
     },
   },
   plugins: [],

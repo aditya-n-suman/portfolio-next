@@ -4,7 +4,7 @@ import NumberedHeading from "./atoms/numberedHeading";
 
 const Experience = () => {
   return (
-    <section id="experience" className="w-2/3 mx-auto">
+    <section id="experience" className="w-2/3 mx-auto py-25">
       <NumberedHeading title="My Professional Journey" width="w-3full" />
       <div className="text-xl">
         <p className="mb-8">
