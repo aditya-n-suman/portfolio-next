@@ -41,8 +41,8 @@ const About = () => {
       </div>
       <div className="w-2/5 h-96">
         <div className="mt-10 profile-pic-container relative aspect-square h-75">
-          <div className="img-container-child absolute top-0 border-2 border-green rounded-1.5 h-75 aspect-square"></div>
-          <div className="img-container-child">
+          <div className="img-container-child fz-transition absolute top-0 border-2 border-green rounded-1.5 h-75 aspect-square"></div>
+          <div className="img-container-child fz-transition">
             <Image
               src={myImage}
               alt="picture of Aditya Nath Suman"

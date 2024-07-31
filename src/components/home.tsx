@@ -14,8 +14,8 @@ const Home = () => {
         </h3>
       </div>
       <p className="text-xl max-w-lg mb-11 leading-tight">
-        I'm a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I'm focused on
+        I&#39;m a software engineer specializing in building (and occasionally
+        designing) exceptional digital experiences. Currently, I&#39;m focused on
         building accessible, human-centered products at Upstatement.
       </p>
       <button className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">

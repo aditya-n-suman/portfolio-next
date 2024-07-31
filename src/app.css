@@ -1,9 +1,9 @@
 .profile-pic-container,
 .img-container-child:nth-child(odd) {
-  @apply translate-x-2 translate-y-2 fz-transition;
+  @apply translate-x-2 translate-y-2 ;
 }
 .img-container-child:nth-child(even) {
-  @apply -translate-x-2 -translate-y-2 fz-transition;
+  @apply -translate-x-2 -translate-y-2;
 }
 .profile-pic-container:hover .img-container-child:nth-child(odd) {
   @apply translate-x-3 translate-y-3;
