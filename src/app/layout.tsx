@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import "../globals.css";
+import "@/globals.css";
 import Header from "@/components/header";
 import LeftSidebar from "@/components/leftSidebar";
 import RightSidebar from "@/components/rightSidebar";
 
 export const metadata: Metadata = {
-  title: "Adity Nath Suman",
+  title: "Aditya Nath Suman",
   description: "one of the best frontend developers",
 };
 
@@ -20,7 +20,7 @@ export default function RootLayout({
         <Header />
         <LeftSidebar />
         <RightSidebar />
-        <div className="px-36">{children}</div>
+        <div className="px-36 w-full">{children}</div>
       </body>
     </html>
   );

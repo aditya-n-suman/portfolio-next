@@ -61,14 +61,16 @@ const config: Config = {
       height: {
         tab: "var(--tab-height)",
         nav: "var(--nav-height)",
-        '90px': "var(--fz-90px)"
+        "90px": "var(--fz-90px)",
+        75: "300px",
       },
       width: {
         tab: "var(--tab-width)",
         "30px": "var(--hamburger-width)",
-        "1px": "var(--fz-1px)"
+        "1px": "var(--fz-1px)",
       },
       translate: {
+        1.5: "6px",
         "2px": "2px",
         2.5: "2.5px",
         "3px": "3px",
@@ -78,8 +80,11 @@ const config: Config = {
         mono: "var(--font-mono)",
       },
       lineHeight: {
-        4.5: "18px"
-      }
+        4.5: "18px",
+      },
+      padding: {
+        25: "100px",
+      },
     },
   },
   plugins: [],

@@ -1,0 +1,27 @@
+.profile-pic-container,
+.img-container-child:nth-child(odd) {
+  @apply translate-x-2 translate-y-2 fz-transition;
+}
+.img-container-child:nth-child(even) {
+  @apply -translate-x-2 -translate-y-2 fz-transition;
+}
+.profile-pic-container:hover .img-container-child:nth-child(odd) {
+  @apply translate-x-3 translate-y-3;
+}
+.profile-pic-container:hover .img-container-child:nth-child(even) {
+  @apply -translate-x-3 -translate-y-3;
+}
+.profile-pic-container img {
+  filter: grayscale(1);
+}
+.profile-pic-container:hover img {
+  filter: none;
+}
+
+.with-dot {
+  @apply relative pl-8;
+}
+.with-dot::before {
+  @apply absolute left-px p-px text-green;
+  content: "▹";
+}
