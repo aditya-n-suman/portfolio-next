@@ -5,23 +5,23 @@ import LeftSidebar from "@/components/leftSidebar";
 import RightSidebar from "@/components/rightSidebar";
 
 export const metadata: Metadata = {
-  title: "Aditya Nath Suman",
-  description: "one of the best frontend developers",
+	title: "Aditya Nath Suman",
+	description: "one of the best frontend developers",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className="">
-        <Header />
-        <LeftSidebar />
-        <RightSidebar />
-        <div className="px-36 w-full">{children}</div>
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en">
+			<body className="">
+				<Header />
+				<LeftSidebar />
+				<RightSidebar />
+				<div className="px-8 sm:px-10 md:px-12 lg:px-60 w-full">{children}</div>
+			</body>
+		</html>
+	);
 }

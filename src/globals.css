@@ -3,134 +3,184 @@
 @tailwind utilities;
 
 :root {
-  --dark-navy: #020c1b;
-  --navy: #0a192f;
-  --light-navy: #112240;
-  --lightest-navy: #233554;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
-  --dark-slate: #495670;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --green-tint: rgba(100, 255, 218, 0.1);
-  --pink: #f57dff;
-  --blue: #57cbff;
-  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
-  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
-  --fz-xxs: 12px;
-  --fz-xs: 13px;
-  --fz-sm: 14px;
-  --fz-md: 16px;
-  --fz-lg: 18px;
-  --fz-xl: 20px;
-  --fz-xxl: 22px;
-  --fz-heading: 32px;
-  --border-radius: 4px;
-  --fz-1px: 1px;
-  --fz-90px: 90px;
-  --nav-height: 100px;
-  --nav-scroll-height: 70px;
-  --tab-height: 42px;
-  --tab-width: 120px;
-  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
-  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --hamburger-width: 30px;
-  --ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
-  --ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
-  --ham-after: bottom 0.1s ease-in 0.25s,
-    transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  --ham-after-active: bottom 0.1s ease-out,
-    transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+	--dark-navy: #020c1b;
+	--navy: #0a192f;
+	--light-navy: #112240;
+	--lightest-navy: #233554;
+	--navy-shadow: rgba(2, 12, 27, 0.7);
+	--dark-slate: #495670;
+	--slate: #8892b0;
+	--light-slate: #a8b2d1;
+	--lightest-slate: #ccd6f6;
+	--white: #e6f1ff;
+	--green: #64ffda;
+	--green-tint: rgba(100, 255, 218, 0.1);
+	--pink: #f57dff;
+	--blue: #57cbff;
+	--font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+		system-ui, sans-serif;
+	--font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+	--fz-xxs: 12px;
+	--fz-xs: 13px;
+	--fz-sm: 14px;
+	--fz-md: 16px;
+	--fz-lg: 18px;
+	--fz-xl: 20px;
+	--fz-xxl: 22px;
+	--fz-heading: 32px;
+	--border-radius: 4px;
+	--fz-1px: 1px;
+	--fz-90px: 90px;
+	--nav-height: 100px;
+	--nav-scroll-height: 70px;
+	--tab-height: 42px;
+	--tab-width: 120px;
+	--easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+	--transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+	--hamburger-width: 30px;
+	--ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+	--ham-before-active: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+	--ham-after: bottom 0.1s ease-in 0.25s,
+		transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+	--ham-after-active: bottom 0.1s ease-out,
+		transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 }
 
 html {
-  scrollbar-color: var(--dark-slate) var(--navy);
-  scrollbar-width: thin;
+	scrollbar-color: var(--dark-slate) var(--navy);
+	scrollbar-width: thin;
 }
 
 body {
-  color: var(--lightest-slate);
-  min-height: 100vh;
-  background: var(--navy);
-  --webkit-font-smoothing: antialiased;
+	color: var(--lightest-slate);
+	min-height: 100vh;
+	background: var(--navy);
+	--webkit-font-smoothing: antialiased;
 }
 
 main {
-  counter-reset: section;
+	counter-reset: section;
+}
+
+main > * {
+	@apply leading-tight;
 }
 
 p {
-  @apply mb-4;
+	@apply mb-4;
 }
 
 @layer base {
-  @font-face {
-    font-family: "SF Mono";
-    src: url(./assets/fonts/SFMono-Regular.woff2) format("woff2");
-    font-display: fallback;
-  }
-  @font-face {
-    font-family: "Calibre";
-    src: url(./assets/fonts/Calibre-Regular.woff2) format("woff2");
-    font-weight: 300;
-    font-display: fallback;
-  }
-  @font-face {
-    font-family: "Calibre";
-    src: url(./assets/fonts/Calibre-Medium.woff2) format("woff2");
-    font-weight: 600;
-    font-display: fallback;
-  }
-  @font-face {
-    font-family: "Calibre";
-    src: url(./assets/fonts/Calibre-Semibold.woff2) format("woff2");
-    font-weight: 900;
-    font-display: fallback;
-  }
-  .text-balance {
-    text-wrap: balance;
-  }
+	@font-face {
+		font-family: "SF Mono";
+		src: url(./assets/fonts/SFMono-Regular.woff2) format("woff2");
+		font-display: fallback;
+	}
+	@font-face {
+		font-family: "Calibre";
+		src: url(./assets/fonts/Calibre-Regular.woff2) format("woff2");
+		font-weight: 300;
+		font-display: fallback;
+	}
+	@font-face {
+		font-family: "Calibre";
+		src: url(./assets/fonts/Calibre-Medium.woff2) format("woff2");
+		font-weight: 600;
+		font-display: fallback;
+	}
+	@font-face {
+		font-family: "Calibre";
+		src: url(./assets/fonts/Calibre-Semibold.woff2) format("woff2");
+		font-weight: 900;
+		font-display: fallback;
+	}
+	.text-balance {
+		text-wrap: balance;
+	}
 
-  .fz-transition {
-    transition: var(--transition);
-  }
+	.fz-transition {
+		transition: var(--transition);
+	}
 
-  .fz-shadow {
-    box-shadow: 3px 3px 0 0 var(--green);
-  }
-}
+	.fz-shadow {
+		box-shadow: 3px 3px 0 0 var(--green);
+	}
 
-.fz-translate {
-  @apply -translate-x-3px -translate-y-3px;
-}
+	.fz-translate {
+		@apply -translate-x-3px -translate-y-3px;
+	}
 
-.-fz-translate {
-  @apply translate-x-3px translate-y-3px;
+	.-fz-translate {
+		@apply translate-x-3px translate-y-3px;
+	}
 }
 
 .fz-sidebar-line {
-  @apply h-90px w-1px bg-slate-light mx-auto;
+	@apply h-90px w-1px bg-slate-light mx-auto;
 }
 
 .fz-vertical-rl {
-  writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
 }
 
 .big-heading {
-  font-size: clamp(40px, 8vw, 80px);
-  line-height: 0.9;
+	font-size: clamp(40px, 8vw, 80px);
+	line-height: 0.9;
 }
 .numbered-heading {
-  font-size: clamp(26px, 5vw, var(--fz-heading));
-  @apply text-slate-lightest;
-  line-height: 1.1;
+	font-size: clamp(26px, 5vw, var(--fz-heading));
+	@apply text-slate-lightest;
+	line-height: 1.1;
+	white-space: nowrap;
 }
 .numbered-heading::before {
-  @apply font-mono font-thin text-green text-lg mr-3;
-  counter-increment: section;
-  content: counter(section, decimal-leading-zero) ".";
-  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+	@apply font-mono font-thin text-green text-lg mr-3;
+	counter-increment: section;
+	content: counter(section, decimal-leading-zero) ".";
+	font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+}
+.heading2 {
+	font-size: clamp(26px, 5vw, var(--fz-heading));
+}
+.whats-next {
+	font-size: clamp(40px, 5vw, 60px);
+}
+.whats-next::before {
+	@apply font-mono font-thin text-green text-md;
+	counter-increment: section;
+	content: counter(section, decimal-leading-zero) ". What's Next?";
+	font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+}
+
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateX(4rem);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes slide-out {
+	from {
+		opacity: 1;
+		transform: none;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.slide-in-right {
+	/* transition-delay: 1s; */
+	/* transition: display 1s cubic-bezier(0, 0.39, 0.88, 1.03),
+		overlay 1s cubic-bezier(0, 0.39, 0.88, 1.03); */
+	animation: slide-in 1s linear forwards;
+	animation-direction: reverse;
+	animation-duration: 2s;
+	&[open] {
+		animation: slide-in 1s linear forwards;
+	}
 }
