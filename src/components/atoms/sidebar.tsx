@@ -29,8 +29,7 @@ const Modal = forwardRef<HTMLDialogElement, PropsWithChildren<ModalProps>>(
 				document.body.classList.remove("blur-sm");
 			};
 		}, [modalRef, isOpen]);
-
-		return createPortal(
+		return (
 			<dialog
 				onCancel={handleClose}
 				ref={modalRef}
@@ -48,8 +47,7 @@ const Modal = forwardRef<HTMLDialogElement, PropsWithChildren<ModalProps>>(
 						<div className="flex-1">{children}</div>
 					</div>
 				</div>
-			</dialog>,
-			document.body
+			</dialog>
 		);
 	}
 );
