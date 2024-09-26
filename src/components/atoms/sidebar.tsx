@@ -19,7 +19,7 @@ const Modal = forwardRef<HTMLDialogElement, PropsWithChildren<ModalProps>>(
 			onClose();
 		};
 		useEffect(() => {
-			if (modalRef.current && isOpen) {
+			if (modalRef?.current && isOpen) {
 				modalRef.current.showModal();
 				document.body.style.overflow = "hidden";
 				document.body.classList.add("blur-sm");
@@ -29,8 +29,6 @@ const Modal = forwardRef<HTMLDialogElement, PropsWithChildren<ModalProps>>(
 				document.body.classList.remove("blur-sm");
 			};
 		}, [modalRef, isOpen]);
-
-		// if (!isOpen) return null;
 
 		return createPortal(
 			<dialog

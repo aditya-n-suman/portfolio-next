@@ -3,9 +3,16 @@ import IconHam from "@/assets/icons/hamburger";
 import LogoBG from "@/assets/logo_bg";
 import Logo from "@/assets/logo_complete";
 import { NAV_ITEMS } from "@/utils/constants";
-import Modal from "./atoms/sidebar";
+import dynamic from "next/dynamic";
+
 import { useRef, useState } from "react";
 
+const Modal = dynamic(
+	() => {
+		return import("@/components/atoms/sidebar");
+	},
+	{ ssr: false }
+);
 const NavItems = ({ linkSelector = () => {} }) => (
 	<>
 		<ol className="flex flex-col lg:flex-row list-zero list-outside gap-6 lg:gap-14 ">
@@ -32,7 +39,7 @@ const Header = () => {
 	const [openModal, setOpenModal] = useState(false);
 	const modalRef = useRef<HTMLDialogElement>(null);
 	const modalCloser = () => {
-		if (modalRef.current) {
+		if (modalRef?.current) {
 			modalRef.current.close();
 			setOpenModal(false);
 		}
