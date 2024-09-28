@@ -1,5 +1,5 @@
-export const INTRO =
-	"I'm a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently I'm focused Digital Business Transformation for a leading American FinCorp at";
+export const DEFAULT_EMAIL =
+	"mailto:adityanathsuman15@gmail.com?subject=Reaching%20out%20for%20a%20project%20idea&body=%0A%20%20Hi,%0A%20%20%20%20I%20read%20your%20portfolio%20and%20would%20love%20to%20connect%20with%20you.%0A";
 export const NAV_ITEMS = ["About", "Experience", "Work", "Contact"];
 export const SOCIAL_MEDIA = [
 	{ name: "github", link: "https://github.com/aditya-n-suman" },
@@ -62,20 +62,49 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
 	{
+		name: "Video Streaming Application",
+		link: "",
+		description:
+			"An app allowing users to upload, stream, and manage videos using Express.js, Node.js, and React.js, with HTML5 support and user authentication.",
+		keywords: ["Express.js", "Node.js", "React.js", "HTML5"],
+		github: "https://github.com/aditya-n-suman/video-streaming-app",
+	},
+	{
 		name: "Weather Forecast App",
 		link: "",
 		description:
-			"A full-stack project to show weather forecast for the searched city using BFF and Strategy pattern to show suggestions for the day, Search uses Debouncing to save resources",
-		keywords: ["ReactJS, NestJS,  Strategy Pattern, BFF, OpenWeather API"],
+			"A full-stack app providing real-time weather forecasts for specified cities. Utilizes BFF architecture and the Strategy Pattern, with debouncing to enhance search responsiveness.",
+		keywords: [
+			"ReactJS",
+			"NestJS",
+			"Strategy Pattern",
+			"BFF",
+			"OpenWeather API",
+		],
 		github: "https://github.com/aditya-n-suman/weather-prediction-be",
 	},
 	{
+		name: "Mini Search Engine",
+		link: "",
+		description:
+			"A mini search engine indexing website links with the PageRank Algorithm, allowing users to create offline copies of sites.",
+		keywords: ["Python", "PageRank Algorithm", "Web Crawling"],
+		github: "https://github.com/aditya-n-suman/mini-search-engine",
+	},
+	{
 		name: "Portfolio Website",
-		link: "https://aditya-nath-suman-portfolio.vercel.app/",
-		description: "NextJS based Portfolio website using Tailwind CSS",
-		keywords: [
-			"ReactJS, NextJS with App Router, Typescript, ESLint, Portfolio",
-		],
-		github: "https://github.com/aditya-n-suman/portfolio-next",
+		link: "",
+		description:
+			"A personal portfolio built with Next.js and Tailwind CSS, showcasing my projects and skills with a responsive design for seamless navigation.",
+		keywords: ["Next.js", "Tailwind CSS", "Responsive Design"],
+		github: "https://github.com/aditya-n-suman/portfolio-website",
+	},
+	{
+		name: "Supplementary Examination Registration Portal",
+		link: "",
+		description:
+			"A portal for managing supplementary examination registrations, enabling students to check results and process payments easily.",
+		keywords: ["HTML", "CSS", "Web Development", "REST APIs"],
+		github: "https://github.com/aditya-n-suman/exam-registration-portal",
 	},
 ];

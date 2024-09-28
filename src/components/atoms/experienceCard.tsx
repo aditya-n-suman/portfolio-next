@@ -15,7 +15,7 @@ const ExperienceCard = ({
 	skills,
 }: ExperienceCardProps) => {
 	return (
-		<div className="flex flex-col lg:flex-row gap-4 mt-6 md:gap-8">
+		<div className="flex flex-wrap md:flex-nowrap mt-6 justify-around">
 			<div className="flex items-center">
 				<div className="">
 					<h3 className="font-semibold text-slate-lightest text-nowrap">
@@ -26,7 +26,7 @@ const ExperienceCard = ({
 					</p>
 				</div>
 			</div>
-			<div className="bg-green-tint bg-opacity-10 p-4 rounded-1.5 text-slate-light">
+			<div className="bg-green-tint bg-opacity-10 p-4 py-6 sm rounded-1.5 text-slate-light min-w-60 max-w-96">
 				<ul className="flex flex-col gap-4 mb-4">
 					{pointers.map((point) => (
 						<li key={point} className="experience-detail with-dot">

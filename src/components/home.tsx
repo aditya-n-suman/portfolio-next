@@ -1,8 +1,10 @@
+import { DEFAULT_EMAIL } from "@/utils/constants";
+
 const Home = () => {
 	return (
 		<section
 			id="content"
-			className="flex flex-col md:justify-center pt-25 md:pt-0">
+			className="flex flex-col justify-center py-48 min-h-screen">
 			<h1 className="text-green text-md font-mono mb-6 md:mb-8">
 				Hi, my name is
 			</h1>
@@ -20,9 +22,11 @@ const Home = () => {
 				for a leading American FinCorp at{" "}
 				<span className="text-green text-nowrap">Publicis Sapient</span>.
 			</p>
-			<button className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">
+			<a
+				href={DEFAULT_EMAIL}
+				className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">
 				Get in touch
-			</button>
+			</a>
 		</section>
 	);
 };

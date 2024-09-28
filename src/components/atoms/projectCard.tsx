@@ -25,20 +25,24 @@ const ProjectCard = ({
 					<a href={github} className="z-2" target="_blank">
 						<IconGitHub height="20" />
 					</a>
-					<IconExternal height="24" />
+					{link ? <IconExternal height="24" /> : <></>}
 				</div>
 			</div>
 			<h3 className="text-white text-xxl font-extrabold">
-				<a
-					href={link}
-					rel="noopener noreferrer"
-					target="_blank"
-					className="project-link">
-					{name}
-				</a>
+				{link ? (
+					<a
+						href={link}
+						rel="noopener noreferrer"
+						target="_blank"
+						className="project-link">
+						{name}
+					</a>
+				) : (
+					name
+				)}
 			</h3>
 			<p className="py-2 mb-1">{description}</p>
-			<div className="font-mono text-slate-light text-xxs md:text-xs flex flex-wrap gap-2 mb-4">
+			<div className="font-mono text-slate-light text-xxs md:text-xs flex flex-wrap gap-2 mt-4">
 				{keywords.map((keyword) => (
 					<span key={keyword} className="">
 						{keyword}

@@ -5,7 +5,11 @@ import ProjectCard from "./atoms/projectCard";
 const Projects = () => {
 	return (
 		<section id="work" className="py-25">
-			<NumberedHeading title="Some Things I've Built" width="w-full" />
+			<NumberedHeading
+				title="Some Things I've Built"
+				width="w-fit mx-auto"
+				hideLine
+			/>
 			<div className="text-lg md:text-xl grid md:grid-cols-2 lg:grid-cols-3 gap-4">
 				{PROJECTS.map((project) => (
 					<ProjectCard key={project.name} {...project} />

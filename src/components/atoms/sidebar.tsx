@@ -7,7 +7,6 @@ declare module "react" {
 
 import IconClose from "@/assets/icons/close";
 import { forwardRef, PropsWithChildren, useEffect } from "react";
-import { createPortal } from "react-dom";
 
 interface ModalProps {
 	isOpen: boolean;

@@ -25,9 +25,9 @@
 	@apply absolute left-px p-px text-green;
 	content: "▹";
 }
-main > section#content {
-	height: calc(100vh - 100px);
-}
+/* main > section#content {
+	min-height: calc(100vh - 100px);
+} */
 .project-link::before {
 	content: "";
 	@apply absolute top-0 bottom-0 right-0 left-0;

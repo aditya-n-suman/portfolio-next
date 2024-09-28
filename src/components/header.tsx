@@ -4,11 +4,11 @@ import LogoBG from "@/assets/logo_bg";
 import Logo from "@/assets/logo_complete";
 import { NAV_ITEMS } from "@/utils/constants";
 import Modal from "./atoms/sidebar";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const NavItems = ({ linkSelector = () => {} }) => (
 	<>
-		<ol className="flex flex-col lg:flex-row list-zero list-outside gap-6 lg:gap-14 ">
+		<ol className="flex flex-col md:flex-row list-zero list-outside gap-6 lg:gap-14 ">
 			{NAV_ITEMS.map((item, index) => (
 				<li
 					onClick={linkSelector}
@@ -23,12 +23,17 @@ const NavItems = ({ linkSelector = () => {} }) => (
 				</li>
 			))}
 		</ol>
-		<button className="flex items-center text-green border-green border-1px rounded-1.5 px-12 md:px-8 py-3 pt-3.5 fz-transition hover:fz-shadow hover:fz-translate leading-4">
+		<a
+			href="/Aditya_nath_suman.pdf"
+			download
+			className="flex items-center text-green border-green border-1px rounded-1.5 px-12 md:px-8 py-3 pt-3.5 fz-transition hover:fz-shadow hover:fz-translate leading-4">
 			Resume
-		</button>
+		</a>
 	</>
 );
 const Header = () => {
+	const [visible, setVisible] = useState(true);
+	const [lastScrollY, setLastScrollY] = useState(0);
 	const [openModal, setOpenModal] = useState(false);
 	const modalRef = useRef<HTMLDialogElement>(null);
 	const modalCloser = () => {
@@ -38,8 +43,32 @@ const Header = () => {
 		}
 	};
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY > lastScrollY && currentScrollY > 25) {
+				// Scrolling down
+				setVisible(false);
+			} else if (currentScrollY < lastScrollY) {
+				// Scrolling up
+				setVisible(true);
+			}
+
+			setLastScrollY(currentScrollY);
+		};
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, [lastScrollY]);
+
 	return (
-		<header className="transition-all px-6 lg:px-[50px] h-[100px] w-full flex items-center">
+		<header
+			className={`fixed z-2 transition-all px-6 lg:px-[50px] h-[100px] w-full flex items-center ${
+				lastScrollY > 0 ? "drop-shadow-2xl" : ""
+			} ${visible ? "translate-y-0 bg-navy" : "-translate-y-full"}`}>
 			<nav className="flex justify-between h-tab flex-1 font-mono items-center">
 				<div className="">
 					<a
@@ -53,10 +82,10 @@ const Header = () => {
 						</div>
 					</a>
 				</div>
-				<div className="hidden lg:flex gap-8 items-center text-xs h-full">
+				<div className="hidden md:flex gap-8 items-center text-xs h-full">
 					<NavItems />
 				</div>
-				<div className="block lg:hidden">
+				<div className="block md:hidden">
 					<button
 						onClick={() => setOpenModal(true)}
 						className="text-green max-h-full w-[42px] aspect-square">

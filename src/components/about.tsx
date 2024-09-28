@@ -7,8 +7,8 @@ const About = () => {
 	return (
 		<section
 			id="about"
-			className="md:px-12 md:py-25 w-full flex flex-col gap-10 min-h-screen items-center lg:flex-row">
-			<div className="md:w-3/5 text-lg md:text-xl ">
+			className="lg:px-12 py-25 w-full flex flex-col gap-10 min-h-screen items-center lg:flex-row">
+			<div className="lg:w-3/5 text-lg md:text-xl ">
 				<NumberedHeading title="About Me" width="w-full" />
 				<p className="">
 					Welcome to my portfolio! I&#39;m Aditya, a dedicated Frontend
@@ -44,7 +44,7 @@ const About = () => {
 					))}
 				</ul>
 			</div>
-			<div className="md:w-2/5 h-96">
+			<div className="lg:w-2/5 h-96">
 				<div className="mt-10 profile-pic-container relative aspect-square h-75">
 					<div className="img-container-child fz-transition absolute top-0 border-2 border-green rounded-1.5 h-75 aspect-square"></div>
 					<div className="img-container-child fz-transition">
