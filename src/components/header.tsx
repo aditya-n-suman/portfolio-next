@@ -6,7 +6,7 @@ import { NAV_ITEMS } from "@/utils/constants";
 import Modal from "./atoms/sidebar";
 import { useEffect, useRef, useState } from "react";
 
-const NavItems = ({ linkSelector = () => {} }) => (
+const NavItems = ({ linkSelector = () => { } }) => (
 	<>
 		<ol className="flex flex-col md:flex-row list-zero list-outside gap-6 lg:gap-14 ">
 			{NAV_ITEMS.map((item, index) => (
@@ -24,7 +24,7 @@ const NavItems = ({ linkSelector = () => {} }) => (
 			))}
 		</ol>
 		<a
-			href="/Aditya_nath_suman.pdf"
+			href="/Resume_Aditya_nath_suman.pdf"
 			download
 			className="flex items-center text-green border-green border-1px rounded-1.5 px-12 md:px-8 py-3 pt-3.5 fz-transition hover:fz-shadow hover:fz-translate leading-4">
 			Resume
@@ -66,9 +66,8 @@ const Header = () => {
 
 	return (
 		<header
-			className={`fixed z-2 transition-all px-6 lg:px-[50px] h-[100px] w-full flex items-center ${
-				lastScrollY > 0 ? "drop-shadow-2xl" : ""
-			} ${visible ? "translate-y-0 bg-navy" : "-translate-y-full"}`}>
+			className={`fixed z-2 transition-all px-6 lg:px-[50px] h-[100px] w-full flex items-center ${lastScrollY > 0 ? "drop-shadow-2xl" : ""
+				} ${visible ? "translate-y-0 bg-navy" : "-translate-y-full"}`}>
 			<nav className="flex justify-between h-tab flex-1 font-mono items-center">
 				<div className="">
 					<a

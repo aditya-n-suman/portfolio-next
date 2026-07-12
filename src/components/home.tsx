@@ -26,7 +26,7 @@ const Home = () => {
 					View Projects
 				</a>
 				<a
-					href="/Aditya_nath_suman.pdf"
+					href="/Resume_Aditya_nath_suman.pdf"
 					download
 					className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">
 					Resume
