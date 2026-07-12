@@ -10,33 +10,35 @@ const About = () => {
 			className="lg:px-12 py-25 w-full flex flex-col gap-10 min-h-screen items-center lg:flex-row">
 			<div className="lg:w-3/5 text-lg md:text-xl ">
 				<NumberedHeading title="About Me" width="w-full" />
-				<p className="">
-					Welcome to my portfolio! I&#39;m Aditya, a dedicated Frontend
-					Developer with a strong emphasis on the React ecosystem. My journey in
-					web development has equipped me with extensive experience in crafting
-					applications using TypeScript, Next.js and TailwindCSS, where I focus
-					on delivering outstanding user experiences through intuitive and
-					interactive designs.
-				</p>
-				<p className="">
-					In addition to my frontend expertise, I possess a robust skill set in
-					backend technologies, including Node.js, Express.js, and NestJS. This
-					dual proficiency allows me to build comprehensive, full-stack
-					solutions that are not only functional but also scalable and
-					maintainable.
-				</p>
-				<p className="">
-					I have a deep appreciation for software design patterns, particularly
-					the Modular Design Pattern, which I use to write clean, modular code
-					that adapts well to changing requirements. I believe in continuous
-					learning and enjoy working collaboratively to create innovative
-					solutions. I invite you to explore my work and reach out — let&#39;s
-					collaborate to turn your vision into reality!
-				</p>
-				<p className="">
-					Here are a few technologies I&#39;ve been working with recently:
-				</p>
-				<ul className="grid grid-cols-2 lg:grid-cols-3 font-mono text-xxs md:text-xs">
+				<div className="flex flex-col gap-4 text-base md:text-lg">
+					<p>
+						I am a Frontend Platform and Performance Engineer driven by the challenge of 
+						making large-scale web applications fast, robust, and delightful to build. Over the past 
+						5+ years, my work has focused on bridging frontend architecture with measurable user experience 
+						outcomes—transforming sluggish client applications into highly optimized, server-rendered systems.
+					</p>
+					
+					<p>
+						In my current role as <strong className="text-green text-nowrap">Lead Frontend Engineer at Info Edge (Shiksha)</strong>, 
+						I lead performance audits and core platform redesigns. I enjoy tearing down build pipeline 
+						bottlenecks (slashing deployment overheads from 30 minutes to 3) and engineering observability telemetry 
+						to diagnose and resolve latency regressions in real time. For me, web performance is not just about 
+						chasing Lighthouse scores; it’s about user-centric metrics like Interaction to Next Paint (INP) and 
+						First Input Delay (FID) that determine business success.
+					</p>
+					
+					<p>
+						My design and development philosophy centers on modular architecture and clean abstraction. 
+						Whether I&#39;m setting up dynamic Module Federation environments, building compatibility adapters to ease framework 
+						migrations, or creating automated developer command-line tools to serialize codebase context for AI workflows, 
+						I build tools that improve both developer speed and system scalability.
+					</p>
+					
+					<p>
+						Here are a few core technologies I work with regularly to solve complex frontend challenges:
+					</p>
+				</div>
+				<ul className="grid grid-cols-2 lg:grid-cols-3 font-mono text-xxs md:text-xs mt-6">
 					{MY_TECHS.map((tech) => (
 						<li key={tech} className="with-dot text-nowrap my-1">
 							{tech}

@@ -13,20 +13,25 @@ const Home = () => {
 					Aditya Nath Suman.
 				</h2>
 				<h3 className="big-heading font-extrabold mt-3">
-					I build things for the web.
+					Building scalable frontend systems for millions of users.
 				</h3>
 			</div>
 			<p className="text-lg md:text-xl max-w-lg mb-11 leading-tight">
-				I&#39;m a software engineer specializing in building exceptional digital
-				experiences. Currently, I&#39; focused Digital Business Transformation
-				for a leading American FinCorp at{" "}
-				<span className="text-green text-nowrap">Publicis Sapient</span>.
+				Lead Frontend Engineer specializing in frontend architecture, performance engineering, SSR, Core Web Vitals, and AI-assisted developer tooling.
 			</p>
-			<a
-				href={DEFAULT_EMAIL}
-				className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">
-				Get in touch
-			</a>
+			<div className="flex flex-wrap gap-4 items-center">
+				<a
+					href="#work"
+					className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">
+					View Projects
+				</a>
+				<a
+					href="/Aditya_nath_suman.pdf"
+					download
+					className="font-mono text-xs w-fit text-green border-green border-1px rounded-1.5 px-8 py-4 fz-transition hover:fz-shadow hover:fz-translate">
+					Resume
+				</a>
+			</div>
 		</section>
 	);
 };

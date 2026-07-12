@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Modernized Portfolio System
 
-## Getting Started
+A premium, engineering-focused professional portfolio optimized for Staff Frontend Engineer, Frontend Architect, and Performance Engineer roles. 
 
-First, run the development server:
+Designed and engineered to benchmark against the aesthetic and architectural standards of Vercel, Stripe, Linear, and OpenAI.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🛠️ Technology Stack & Performance Highlights
+
+* **Framework:** Next.js 14.2 (App Router, Static Pre-rendering)
+* **Core:** React 18, TypeScript (Strict static analysis check)
+* **Styling:** Tailwind CSS + custom CSS custom properties (Zinc theme)
+* **Hydration & Build:** Code splitting, lazy-loaded components, and high-performance sub-sections
+* **SEO & Observability:** Custom JSON-LD ProfilePage schema, static metadata optimization, and OpenGraph/Twitter configurations
+
+---
+
+## 🏗️ Architectural Overview & Design Patterns
+
+The codebase is engineered with strict modular abstraction to demonstrate senior engineering maturity:
+
+```mermaid
+graph TD
+  Layout[src/app/layout.tsx] --> Page[src/app/page.tsx]
+  Page --> Home[src/components/home.tsx]
+  Page --> Highlights[src/components/highlights.tsx]
+  Page --> About[src/components/about.tsx]
+  Page --> Expertise[src/components/expertise.tsx]
+  Page --> Experience[src/components/experience.tsx]
+  Page --> Projects[src/components/projects.tsx]
+  Page --> OpenSource[src/components/openSource.tsx]
+  Page --> Writing[src/components/writing.tsx]
+  Page --> Contact[src/components/contact.tsx]
+  
+  Components --> Constants[src/utils/constants.ts]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Core Architecture Pillars:
+1. **Performance Telemetry Dashboard:** Highlights crucial core metrics (e.g. INP reduction, critical path CSS gains, load time optimizations).
+2. **Dynamic Adapter Protocols:** Adapts legacy React structures to current Next.js paradigms cleanly without overhead.
+3. **Structured Project Representation:** Breaks down projects into *Problem*, *Solution*, and *Engineering Challenges* rather than simple bullet points, reflecting a product-minded engineering approach.
+4. **Theme Customization Layer:** Maps Tailwind configurations dynamically to custom properties in `globals.css`, keeping colors consistent with modern dark zinc interfaces.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📂 Folder Structure
 
-## Learn More
+```text
+├── public/                 # Static assets (Resume, PDF overlays, etc.)
+└── src/
+    ├── app/                # Next.js App Router (Layout, pages, and metadata)
+    ├── assets/             # Raw icons, logo SVGs, local fonts, and image files
+    ├── components/         # Reusable React components
+    │   └── atoms/          # Atomic components (Headings, Timeline cards, Modals)
+    ├── types/              # Common TypeScript definition interfaces
+    ├── utils/              # Configuration constants, structured logs
+    └── globals.css         # Custom property configurations, global utility classes
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Prerequisites
 
-## Deploy on Vercel
+* Node.js (version 18 or above recommended)
+* npm or Yarn
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/aditya-n-suman/portfolio-next.git
+   cd portfolio-next
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server locally:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:4000](http://localhost:4000) to view the application.
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+5. Run linter checks:
+   ```bash
+   npm run lint
+   ```
